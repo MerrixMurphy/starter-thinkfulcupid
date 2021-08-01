@@ -13,13 +13,18 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
 p {
   line-height: 1.5em;
   margin: 0;
+  font-size: 14px;
+}
+
+main ul li {
+  font-size: 14px;
 }
 
 section {
@@ -32,7 +37,9 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
 }
 
 /* ---  Groups & Items --- */
@@ -65,8 +72,15 @@ header {
   color: #ecdbc9;
 }
 
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 header nav ul li {
   list-style-type: none;
+  margin-bottom: 15px;
 }
 
 header nav ul li a {
@@ -81,6 +95,9 @@ header nav ul li a:hover {
 }
 
 /* -------  Join Form ------- */
+legend {
+}
+
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
@@ -90,10 +107,17 @@ form label {
   font-weight: bold;
 }
 
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  padding-left: 0;
 }
 
 form button {
@@ -118,3 +142,75 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  main ul li {
+    font-size: 16px;
+  }
+  header nav ul {
+    justify-content: flex-end;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  main img {
+    width: 50%;
+  }
+  #join {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #about div {
+    display: flex;
+    flex-direction: row;
+  }
+  #about div img {
+    width: 25%;
+    margin-right: 20px;
+    padding: 0;
+  }
+  #about div p {
+    width: 50%;
+    align-self: center;
+  }
+  #download div {
+    flex-direction: column;
+    width: 50%;
+    align-self: center;
+  }
+  #download {
+    display: flex;
+  }
+  #download img {
+    width: 50%;
+    margin: 10px;
+    padding: 0;
+  }
+  #blog div {
+    display: flex;
+    flex-direction: row;
+  }
+  #blog div div {
+    display: flex;
+    flex-direction: column;
+  }
+  #blog div div img {
+    display: flex;
+    width: 90%;
+  }
+  #blog div div p,
+  #blog div div h3 {
+    width: 90%;
+    margin: 10px;
+  }
+}
